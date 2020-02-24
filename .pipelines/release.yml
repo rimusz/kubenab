@@ -54,5 +54,6 @@ pipelines:
             - cd $res_kubenab_release_resourcePath
             - ls
             - cd cmd/kubenab
+            - go mod download
             - go build
  
