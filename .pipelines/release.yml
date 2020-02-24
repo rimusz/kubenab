@@ -52,5 +52,5 @@ pipelines:
             - cd $res_kubenab_release_resourcePath
             - ls
             - pwd
-            - curl -sL https://raw.githubusercontent.com/goreleaser/get/master/get | VERSION=v0.127.0 bash --snapshot --skip-publish --rm-dist
+            - curl -sL https://raw.githubusercontent.com/goreleaser/get/master/get | VERSION=v0.127.0 bash
             - echo "goreleaser finished!!!"
