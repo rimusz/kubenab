@@ -17,4 +17,5 @@ builds:
       -  --snapshot 
       - --skip-publish 
       - --rm-dist
-
+release:
+  skip: true
