@@ -14,8 +14,7 @@ builds:
       - amd64
     flags:
       - -tags 'strip_debug'
-      -  --snapshot 
+      - --snapshot 
       - --skip-publish 
       - --rm-dist
-release:
-  skip: true
+
