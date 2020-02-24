@@ -24,7 +24,7 @@ pipelines:
           dockerFileLocation: .
           dockerFileName: Dockerfile
           dockerImageName: kubenab
-          dockerImageTag: $run_number
+          dockerImageTag: test
           inputResources:
             - name: kubenab_release
       - name: goreleaser
@@ -38,7 +38,7 @@ pipelines:
                 tag: 1.13-stretch
                 autoPull: false
           environmentVariables:
-            TAG_NAME: $run_number
+            TAG_NAME: test
           inputResources:
             - name: kubenab_release
               trigger: false
