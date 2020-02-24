@@ -39,6 +39,7 @@ pipelines:
                 autoPull: false
           environmentVariables:
             TAG_NAME: test
+            GITHUB_TOKEN: 000000000000000000000000000
           inputResources:
             - name: kubenab_release
               trigger: false
