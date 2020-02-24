@@ -27,7 +27,7 @@ pipelines:
           dockerImageTag: test
           inputResources:
             - name: kubenab_release
-      - name: goreleaser
+      - name: buildGo
         type: Bash
         configuration:
           runtime:
@@ -39,7 +39,9 @@ pipelines:
                 autoPull: false
           environmentVariables:
             TAG_NAME: test
-            GITHUB_TOKEN: 000000000000000000000000000
+            GO111MODULE: on
+            GOPROXY: https://gocenter.io
+            CGO_ENABLED: 0
           inputResources:
             - name: kubenab_release
               trigger: false
@@ -51,6 +53,6 @@ pipelines:
           onExecute:
             - cd $res_kubenab_release_resourcePath
             - ls
-            - pwd
-            - curl -sL https://raw.githubusercontent.com/goreleaser/get/master/get | VERSION=v0.127.0 bash
-            - echo "goreleaser finished!!!"
+            - cd cmd/kubenab
+            - go build
+ 
