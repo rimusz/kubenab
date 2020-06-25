@@ -36,7 +36,7 @@ pipelines:
               custom:
                 name: golang
                 tag: 1.13.9
-                autoPull: false
+                autoPull: true
           environmentVariables:
             TAG_NAME: test
             GO111MODULE: on
