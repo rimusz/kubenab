@@ -31,7 +31,7 @@ pipelines:
       - name: buildGo
         type: Bash
         configuration:
-          nodePool: k8s_dynamic_pool
+          nodePool: k8s-dynamic-nodepool
           runtime:
             type: image
             image:
