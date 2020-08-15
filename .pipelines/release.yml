@@ -20,8 +20,8 @@ pipelines:
       - name: build_image
         type: DockerBuild
         configuration:
-          nodePool: k8s-dynamic-nodepool
-          affinityGroup: bldGroup
+          nodePool: k8s-dynamic-pool
+          affinityGroup: kubenabGroup
           dockerFileLocation: .
           dockerFileName: Dockerfile
           dockerImageName: kubenab
@@ -31,8 +31,8 @@ pipelines:
       - name: buildGo
         type: Bash
         configuration:
-          nodePool: k8s-dynamic-nodepool
-          affinityGroup: bldGroup
+          nodePool: k8s-dynamic-pool
+          affinityGroup: kubenabGroup
           runtime:
             type: image
             image:
