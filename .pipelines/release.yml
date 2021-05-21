@@ -38,7 +38,7 @@ pipelines:
             image:
               custom:
                 name: golang
-                tag: 1.13.9
+                tag: 1.16
                 autoPull: true
           environmentVariables:
             TAG_NAME: test
