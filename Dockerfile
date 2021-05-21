@@ -12,7 +12,7 @@ COPY cmd/kubenab/go.mod cmd/kubenab/go.sum /src/kubenab/kubenab/cmd/kubenab/
 
 # Download modules
 RUN cd cmd/kubenab && \
-    GO111MODULE=on GOPROXY=https://gocenter.io go mod download
+    GO111MODULE=on go mod download
 
 # Copy source
 COPY . /src/kubenab/kubenab/
