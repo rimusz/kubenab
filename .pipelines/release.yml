@@ -43,7 +43,6 @@ pipelines:
           environmentVariables:
             TAG_NAME: test
             GO111MODULE: on
-            GOPROXY: https://gocenter.io
             CGO_ENABLED: 0
           inputResources:
             - name: kubenab_release
